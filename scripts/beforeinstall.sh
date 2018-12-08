@@ -3,7 +3,7 @@ sudo add-apt-repository ppa:webupd8team/java -y
 sudo apt-get update
 sudo apt-get install oracle-java8-installer -y
 
-sudo service springboot stop
+sudo service javaapp stop
 
 # create java service
 cat > /etc/init/javaapp.conf <<'EOF'
