@@ -6,8 +6,8 @@ sudo apt-get install oracle-java8-installer -y
 sudo service springboot stop
 
 # create java service
-cat > /etc/init/springboot.conf <<'EOF'
-description "springboot Server"
+cat > /etc/init/javaapp.conf <<'EOF'
+description "java Server"
   start on runlevel [2345]
   stop on runlevel [!2345]
   respawn
@@ -20,7 +20,7 @@ description "springboot Server"
   setgid ubuntu
   # adapt paths:
   
-  exec java -jar /home/ubuntu/deploy/spring-boot-web-0.0.1-SNAPSHOT.jar  
+  exec java -jar /home/ubuntu/deploy/parent0.6.1-SNAPSHOT.jar  
   # cleanup temp directory after stop
   post-stop script
   end script
